@@ -71,6 +71,10 @@ use std::collections::HashSet;
 mod macos;
 #[cfg(target_os = "macos")]
 use crate::macos::listen as _listen;
+#[cfg(target_os = "windows")]
+mod windows;
+#[cfg(target_os = "windows")]
+use crate::windows::listen as _listen;
 
 pub use crate::traits::{Key, Keyset, ListenError};
 

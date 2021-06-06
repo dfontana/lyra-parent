@@ -13,6 +13,9 @@ pub enum ListenError {
   /// MacOS Specific, occurs when the system fails to register the loop
   /// primitive against the host system.
   LoopSourceError,
+
+  /// Windows Specific, occurs when the hook fails to initialize
+  HookError(u32),
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
